@@ -5,43 +5,33 @@
     
   <url>
     <loc>http://leishiguang.com/2016/06/01/2016-06-01-qiniu/</loc>
-    <lastmod>2016-07-26T14:16:00.000Z</lastmod>
+    <lastmod>2016-07-28T09:00:43.000Z</lastmod>
     <data>
         <display>
         <title>七牛图床使用体会</title>
         <pubTime>2016-05-31T16:00:00.000Z</pubTime>
         
+        <tag>图床</tag>
+         
+        <tag>个人博客</tag>
+         
          
            
+             
+              <breadCrumb title="闲杂小技术" url="http://leishiguang.com/categories/%E9%97%B2%E6%9D%82%E5%B0%8F%E6%8A%80%E6%9C%AF/"/>
+          
         </display>
     </data>
     </url>
 
     
   <url>
-    <loc>http://leishiguang.com/2016/07/27/2016-07-27-notice/</loc>
-    <lastmod>2016-07-26T13:46:25.000Z</lastmod>
+    <loc>http://leishiguang.com/2016/07/28/2016-07-28-PMa-03/</loc>
+    <lastmod>2016-07-28T08:58:53.000Z</lastmod>
     <data>
         <display>
-        <title>公告</title>
-        <pubTime>2016-07-26T16:00:00.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-  <url>
-    <loc>http://leishiguang.com/2016/07/25/2016-07-25-PMa-02/</loc>
-    <lastmod>2016-07-26T06:52:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>“初窥”项目管理 - 人人都应该学项目管理</title>
-        <pubTime>2016-07-24T16:00:00.000Z</pubTime>
+        <title>“初窥”项目管理03 - 鸟瞰IT项目管理</title>
+        <pubTime>2016-07-27T16:00:00.000Z</pubTime>
         
         <tag>项目管理</tag>
          
@@ -50,6 +40,41 @@
              
               <breadCrumb title="“初窥”项目管理" url="http://leishiguang.com/categories/%E2%80%9C%E5%88%9D%E7%AA%A5%E2%80%9D%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://leishiguang.com/2016/07/26/2016-07-26-PMa-02/</loc>
+    <lastmod>2016-07-28T08:58:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>“初窥”项目管理02 - 人人都应该学项目管理</title>
+        <pubTime>2016-07-25T16:00:00.000Z</pubTime>
+        
+        <tag>项目管理</tag>
+         
+         
+           
+             
+              <breadCrumb title="“初窥”项目管理" url="http://leishiguang.com/categories/%E2%80%9C%E5%88%9D%E7%AA%A5%E2%80%9D%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://leishiguang.com/2016/07/29/2016-07-29-notice/</loc>
+    <lastmod>2016-07-28T08:54:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>公告</title>
+        <pubTime>2016-07-28T16:00:00.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
@@ -57,10 +82,10 @@
     
   <url>
     <loc>http://leishiguang.com/2016/07/25/2016-07-25-PMa-01/</loc>
-    <lastmod>2016-07-26T02:10:30.000Z</lastmod>
+    <lastmod>2016-07-28T08:53:37.000Z</lastmod>
     <data>
         <display>
-        <title>“初窥”项目管理 - 前言</title>
+        <title>“初窥”项目管理01 - 前言</title>
         <pubTime>2016-07-24T16:00:00.000Z</pubTime>
         
         <tag>项目管理</tag>
@@ -74,6 +99,8 @@
     </data>
     </url>
 
+    
+    
     
     
     
