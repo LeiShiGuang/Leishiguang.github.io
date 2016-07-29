@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="项目管理," />
+  <meta name="keywords" content="Unity3D,教程," />
 
 
 
@@ -86,24 +86,40 @@
 
 
 
-<meta name="description" content="“让人们做事的艺术” —— 玛丽·法雷特（Mary Follett），二十世纪早期管理学作家“世事洞明皆学问，人情练达即文章”——《红楼梦》
+<meta name="description" content="这篇教程是我上学的笔记，Unity3D初学，一步一步从零开始构建一个“太空射击”游戏。
 
-在现实当中，离不开人和事。而管理就是，让人和事整合得很好。思想：管理管理，管的是事，理的是人">
+一、游戏功能概述一个简单的太空射击游戏，将实现自动出现陨石、敌机，玩家需要控制自己的飞机躲避陨石，或者击落敌机。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="“初窥”项目管理03 - 鸟瞰IT项目管理">
-<meta property="og:url" content="http://leishiguang.com/2016/07/28/2016-07-28-PMa-03/index.html">
+<meta property="og:title" content="一步一步构建“太空射击”Unity3D游戏（一）">
+<meta property="og:url" content="http://leishiguang.com/2016/07/29/2016-07-29-SpaceShoot_1/index.html">
 <meta property="og:site_name" content="雷世光的个人博客">
-<meta property="og:description" content="“让人们做事的艺术” —— 玛丽·法雷特（Mary Follett），二十世纪早期管理学作家“世事洞明皆学问，人情练达即文章”——《红楼梦》
+<meta property="og:description" content="这篇教程是我上学的笔记，Unity3D初学，一步一步从零开始构建一个“太空射击”游戏。
 
-在现实当中，离不开人和事。而管理就是，让人和事整合得很好。思想：管理管理，管的是事，理的是人">
-<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/PM0-02-01.jpg">
-<meta property="og:updated_time" content="2016-07-28T08:58:53.000Z">
+一、游戏功能概述一个简单的太空射击游戏，将实现自动出现陨石、敌机，玩家需要控制自己的飞机躲避陨石，或者击落敌机。">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-01-cover.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-02-DowntoCamera.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-05-Playershipcollidereasy.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-03-Playershipcollider1.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-04-Playershipcollider2.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-08-Gravity.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-07-Rigidbodyjpg.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-06-Trigger.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-10-engines_player2.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-09-engines_player1.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-11-light1.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-12-light2.png">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-13-Stander.png">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-14-Quard1.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-15-background1.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-16-background2.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-17-background3.jpg">
+<meta property="og:updated_time" content="2016-07-29T14:43:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="“初窥”项目管理03 - 鸟瞰IT项目管理">
-<meta name="twitter:description" content="“让人们做事的艺术” —— 玛丽·法雷特（Mary Follett），二十世纪早期管理学作家“世事洞明皆学问，人情练达即文章”——《红楼梦》
+<meta name="twitter:title" content="一步一步构建“太空射击”Unity3D游戏（一）">
+<meta name="twitter:description" content="这篇教程是我上学的笔记，Unity3D初学，一步一步从零开始构建一个“太空射击”游戏。
 
-在现实当中，离不开人和事。而管理就是，让人和事整合得很好。思想：管理管理，管的是事，理的是人">
-<meta name="twitter:image" content="http://oax3gi35k.bkt.clouddn.com/PM0-02-01.jpg">
+一、游戏功能概述一个简单的太空射击游戏，将实现自动出现陨石、敌机，玩家需要控制自己的飞机躲避陨石，或者击落敌机。">
+<meta name="twitter:image" content="http://oax3gi35k.bkt.clouddn.com/20160729-01-cover.jpg">
 
 
 
@@ -121,7 +137,7 @@
   };
 </script>
 
-  <title> “初窥”项目管理03 - 鸟瞰IT项目管理 | 雷世光的个人博客 </title>
+  <title> 一步一步构建“太空射击”Unity3D游戏（一） | 雷世光的个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -301,7 +317,7 @@
             
             
               
-                “初窥”项目管理03 - 鸟瞰IT项目管理
+                一步一步构建“太空射击”Unity3D游戏（一）
               
             
           </h1>
@@ -313,8 +329,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-28T00:00:00+08:00" content="2016-07-28">
-              2016-07-28
+            <time itemprop="dateCreated" datetime="2016-07-29T00:00:00+08:00" content="2016-07-29">
+              2016-07-29
             </time>
           </span>
 
@@ -327,8 +343,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/“初窥”项目管理/" itemprop="url" rel="index">
-                    <span itemprop="name">“初窥”项目管理</span>
+                  <a href="/categories/Unity3D教程/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity3D教程</span>
                   </a>
                 </span>
 
@@ -343,8 +359,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/28/2016-07-28-PMa-03/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/28/2016-07-28-PMa-03/" itemprop="commentsCount"></span>
+                <a href="/2016/07/29/2016-07-29-SpaceShoot_1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/29/2016-07-29-SpaceShoot_1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -373,29 +389,55 @@
 
       
         <blockquote>
-<p>“让人们做事的艺术” —— 玛丽·法雷特（Mary Follett），二十世纪早期管理学作家<br>“世事洞明皆学问，人情练达即文章”——《红楼梦》</p>
+<p>这篇教程是我上学的笔记，Unity3D初学，一步一步从零开始构建一个“太空射击”游戏。</p>
 </blockquote>
-<p>在现实当中，离不开人和事。而管理就是，让人和事整合得很好。<br><strong>思想：</strong>管理管理，管的是事，理的是人<br><a id="more"></a></p>
-<p>管事：事情是死的，有规律的，在管事则有方法、技术、工具。<br>理人：梳理人与人之间的关系，“你怎么老是不理我啊”，这个理就是沟通。</p>
-<h2 id="项目管理"><a href="#项目管理" class="headerlink" title="项目管理"></a>项目管理</h2><p>Project Mangement，将知识、技能、工具与技术应用于项目活动，以满足项目的要求。</p>
-<p><img src="http://oax3gi35k.bkt.clouddn.com/PM0-02-01.jpg" alt="PM0-02-01"></p>
-<p>上图显示了项目管理分为管事、理人，与整合的关系。</p>
-<ul>
-<li><strong>管事有许多的方法与技能</strong></li>
-<li><strong>理人有许多的理论与经验</strong></li>
-<li><strong>整合，便是让人做事的艺术</strong></li>
-</ul>
-<h2 id="什么是项目"><a href="#什么是项目" class="headerlink" title="什么是项目"></a>什么是项目</h2><p><strong>项目的三大特性</strong>：</p>
-<ul>
-<li>独特性：历史上不存在完全相同的项目</li>
-<li>临时性：有明确的起止时间，即便是有些项目时间很长</li>
-<li>渐进明细：在项目早期刚过开始的时候，有许多的未知，很多的不可控，也只有在项目的逐渐展开中，通过计划和控制，渐进明细。</li>
-</ul>
-<p>所谓的项目管理，就是把渐进明细做好。项目经历的各项活动，都是为了如何让渐进明细做得更加准确。</p>
-<p>任何项目都有这三个特征。<br>任何有这三个特征的，都可以当做项目。可以用项目管理的方法来管理…（搞生产和搞运营，都不是项目管理….）</p>
-<p>比如：修建一栋居民楼…<br>    盖一栋楼，独特性明显不明显…（有太多太多的未知性，独特！）<br>    临时性，固定的起止时间<br>    渐进明细…从图纸的绘制开始，渐渐明确地质之类的….</p>
-<p>比如2：卖的很好的一个汽车，再生产一万两….<br>    是否有独特性…没有<br>      渐进明细是否，没有。<br>      不是一个项目..</p>
-<p>最后，一句话：<br>项目管理的很多思想、很多方法，都是围绕着<strong>确保过程和结果是成功的</strong>。</p>
+<h2 id="一、游戏功能概述"><a href="#一、游戏功能概述" class="headerlink" title="一、游戏功能概述"></a>一、游戏功能概述</h2><p>一个简单的太空射击游戏，将实现自动出现陨石、敌机，玩家需要控制自己的飞机躲避陨石，或者击落敌机。<br><a id="more"></a></p>
+<p><img src="http://oax3gi35k.bkt.clouddn.com/20160729-01-cover.jpg" alt="01-cover"></p>
+<h2 id="二、开发环境与素材"><a href="#二、开发环境与素材" class="headerlink" title="二、开发环境与素材"></a>二、开发环境与素材</h2><p>Unity3D，我的版本是，<code>Unity3D 5.1.2f 64位 Mac</code><br>素材<code>SpaceShooter.unitypackage</code>，网盘下载链接：<a href="http://pan.baidu.com/s/1dFfrmTV" target="_blank" rel="external">网盘</a>，密码: <code>p2p5</code></p>
+<h2 id="三、资源导入"><a href="#三、资源导入" class="headerlink" title="三、资源导入"></a>三、资源导入</h2><ol>
+<li>新建工程，格式为3D格式，确认自己的保存路径；</li>
+<li>点击Unity菜单栏<code>Assents -&gt; Import package -&gt; custom package</code>；</li>
+<li>选择准备的素材<code>SpaceShooter.unitypackage</code>，导入即可；</li>
+</ol>
+<h2 id="四、创建玩家飞机"><a href="#四、创建玩家飞机" class="headerlink" title="四、创建玩家飞机"></a>四、创建玩家飞机</h2><ol>
+<li>在<code>Project</code>搜索栏中找到<code>vehicle_playerShip</code>，拖拽至<code>Hierarchy</code>；</li>
+<li><p>调整摄像机的视角，使<code>PlayerShip</code>在视线正下方；<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-02-DowntoCamera.jpg" alt="02-DowntoCamera"></p>
+</li>
+<li><p>给飞机添加碰撞<br>添加<code>MeshCollider</code>选中<code>vehicle_playerShip</code>，点击<code>Inspector</code>中的<code>Add Componet</code>，找到<code>Mesh Collider</code>，添加<code>player_ship_collider</code>，勾选覆盖，则自动将碰撞的范围确定为飞机自身。<br>使用简易的模型替换复杂模型实现碰撞效果：<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-05-Playershipcollidereasy.jpg" alt=""><br>覆盖前：<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-03-Playershipcollider1.jpg" alt=""><br>覆盖后：<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-04-Playershipcollider2.jpg" alt=""></p>
+</li>
+<li><p>设置触发器选项，勾上<code>Mesh Collider -&gt; is Trigger</code>，模型在于陨石发生碰撞时候，要发生爆炸，需要起到一个触发的作用。<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-08-Gravity.jpg" alt="Tirgger"></p>
+</li>
+<li><p>设置刚体，为玩家飞机加上<code>Rightbody</code><br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-07-Rigidbodyjpg.jpg" alt="Rigidboy"></p>
+</li>
+<li><p>取消重力，否则飞机会往下掉，去除<code>Use Gavity</code>的勾<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-06-Trigger.jpg" alt="Gavity"></p>
+</li>
+<li><p>添加尾焰效果<br>在<code>Project</code>搜索栏中找到<code>engines_player</code>，拖拽至<code>Playership</code>。<br>飞机模型变为：<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-10-engines_player2.jpg" alt=""><br>点击运行之后，飞机变为：<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-09-engines_player1.jpg" alt=""></p>
+</li>
+<li><p>将该飞机保存为<strong>预置体</strong><br>在<code>Hierarchy</code>窗口中，拖拽<code>Player_ship</code>到<code>Project</code>窗口<code>/Assents/Prefabs</code>文件夹即可</p>
+</li>
+</ol>
+<h2 id="五、玩家飞机材质（Standard）和灯光"><a href="#五、玩家飞机材质（Standard）和灯光" class="headerlink" title="五、玩家飞机材质（Standard）和灯光"></a>五、玩家飞机材质（Standard）和灯光</h2><ol>
+<li>调整<code>main_light</code>灯光位置、角度，该光源的强度可以大一些；</li>
+<li>新建一个名为<code>fill_light</code>的平行光，该光源的强度可以较小；</li>
+<li><p>新建一个从下往上的灯光<code>Down_light</code>，目的为把物体的轮廓表示出来;<br>效果如图：<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-11-light1.jpg" alt=""><br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-12-light2.png" alt=""></p>
+</li>
+<li><p>调整飞机材质、贴图<br>此处先选用在Metal上使用Stander，在glass上使用Stander（Specular setup）<br>两个材质球功能很强大，可以自行调整参数，进行更多的摸索。<br>如图：<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-13-Stander.png" alt=""></p>
+</li>
+</ol>
+<h2 id="六、添加太空背景"><a href="#六、添加太空背景" class="headerlink" title="六、添加太空背景"></a>六、添加太空背景</h2><ol>
+<li>在<code>Hierarchy</code>中创建一个<code>Quard</code>，修改名字为<code>BackgroundMap</code></li>
+<li><p>调整方位与大小<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-14-Quard1.jpg" alt=""></p>
+</li>
+<li><p>添加图片<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-15-background1.jpg" alt=""></p>
+</li>
+<li><p>调整图片比例，将X与Y的比例调整为1:2，得到不拉伸的图。<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-16-background2.jpg" alt=""></p>
+</li>
+<li><p>调整相机的位置和角度，使整个页面的大小位置合适，距离飞机的高度也合适<br><img src="http://oax3gi35k.bkt.clouddn.com/20160729-17-background3.jpg" alt=""></p>
+</li>
+</ol>
+<blockquote>
+<p>待续……<br>下一期，实现玩家移动控制。</p>
+</blockquote>
 
       
     </div>
@@ -417,7 +459,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/项目管理/" rel="tag">#项目管理</a>
+            <a href="/tags/Unity3D/" rel="tag">#Unity3D</a>
+          
+            <a href="/tags/教程/" rel="tag">#教程</a>
           
         </div>
       
@@ -426,16 +470,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/26/2016-07-26-PMa-02/" rel="next" title="“初窥”项目管理02 - 人人都应该学项目管理">
-                <i class="fa fa-chevron-left"></i> “初窥”项目管理02 - 人人都应该学项目管理
+              <a href="/2016/07/28/2016-07-28-PMa-03/" rel="next" title="“初窥”项目管理03 - 鸟瞰IT项目管理">
+                <i class="fa fa-chevron-left"></i> “初窥”项目管理03 - 鸟瞰IT项目管理
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/29/2016-07-29-SpaceShoot_1/" rel="prev" title="一步一步构建“太空射击”Unity3D游戏（一）">
-                一步一步构建“太空射击”Unity3D游戏（一） <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/30/2016-07-30-notice/" rel="prev" title="公告">
+                公告 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -451,10 +495,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/07/28/2016-07-28-PMa-03/"
-     data-title="“初窥”项目管理03 - 鸟瞰IT项目管理"
+        <div class="ds-share flat" data-thread-key="2016/07/29/2016-07-29-SpaceShoot_1/"
+     data-title="一步一步构建“太空射击”Unity3D游戏（一）"
      data-content=""
-     data-url="http://leishiguang.com/2016/07/28/2016-07-28-PMa-03/">
+     data-url="http://leishiguang.com/2016/07/29/2016-07-29-SpaceShoot_1/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -481,8 +525,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/28/2016-07-28-PMa-03/"
-           data-title="“初窥”项目管理03 - 鸟瞰IT项目管理" data-url="http://leishiguang.com/2016/07/28/2016-07-28-PMa-03/">
+      <div class="ds-thread" data-thread-key="2016/07/29/2016-07-29-SpaceShoot_1/"
+           data-title="一步一步构建“太空射击”Unity3D游戏（一）" data-url="http://leishiguang.com/2016/07/29/2016-07-29-SpaceShoot_1/">
       </div>
     
   </div>
@@ -632,7 +676,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目管理"><span class="nav-number">1.</span> <span class="nav-text">项目管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是项目"><span class="nav-number">2.</span> <span class="nav-text">什么是项目</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、游戏功能概述"><span class="nav-number">1.</span> <span class="nav-text">一、游戏功能概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、开发环境与素材"><span class="nav-number">2.</span> <span class="nav-text">二、开发环境与素材</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、资源导入"><span class="nav-number">3.</span> <span class="nav-text">三、资源导入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、创建玩家飞机"><span class="nav-number">4.</span> <span class="nav-text">四、创建玩家飞机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、玩家飞机材质（Standard）和灯光"><span class="nav-number">5.</span> <span class="nav-text">五、玩家飞机材质（Standard）和灯光</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、添加太空背景"><span class="nav-number">6.</span> <span class="nav-text">六、添加太空背景</span></a></li></ol></div>
             
           </div>
         </section>

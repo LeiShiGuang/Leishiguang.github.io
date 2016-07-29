@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://leishiguang.com/"/>
-  <updated>2016-07-28T08:54:52.000Z</updated>
+  <updated>2016-07-29T14:35:15.000Z</updated>
   <id>http://leishiguang.com/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>公告</title>
-    <link href="http://leishiguang.com/2016/07/29/2016-07-29-notice/"/>
-    <id>http://leishiguang.com/2016/07/29/2016-07-29-notice/</id>
-    <published>2016-07-28T16:00:00.000Z</published>
-    <updated>2016-07-28T08:54:52.000Z</updated>
+    <link href="http://leishiguang.com/2016/07/30/2016-07-30-notice/"/>
+    <id>http://leishiguang.com/2016/07/30/2016-07-30-notice/</id>
+    <published>2016-07-29T16:00:00.000Z</published>
+    <updated>2016-07-29T14:35:15.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本博客正在积极建设当中，敬请期待。&lt;/p&gt;
@@ -43,6 +43,83 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>一步一步构建“太空射击”Unity3D游戏（一）</title>
+    <link href="http://leishiguang.com/2016/07/29/2016-07-29-SpaceShoot_1/"/>
+    <id>http://leishiguang.com/2016/07/29/2016-07-29-SpaceShoot_1/</id>
+    <published>2016-07-28T16:00:00.000Z</published>
+    <updated>2016-07-29T14:43:36.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;这篇教程是我上学的笔记，Unity3D初学，一步一步从零开始构建一个“太空射击”游戏。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;一、游戏功能概述&quot;&gt;&lt;a href=&quot;#一、游戏功能概述&quot; class=&quot;headerlink&quot; title=&quot;一、游戏功能概述&quot;&gt;&lt;/a&gt;一、游戏功能概述&lt;/h2&gt;&lt;p&gt;一个简单的太空射击游戏，将实现自动出现陨石、敌机，玩家需要控制自己的飞机躲避陨石，或者击落敌机。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-01-cover.jpg&quot; alt=&quot;01-cover&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;二、开发环境与素材&quot;&gt;&lt;a href=&quot;#二、开发环境与素材&quot; class=&quot;headerlink&quot; title=&quot;二、开发环境与素材&quot;&gt;&lt;/a&gt;二、开发环境与素材&lt;/h2&gt;&lt;p&gt;Unity3D，我的版本是，&lt;code&gt;Unity3D 5.1.2f 64位 Mac&lt;/code&gt;&lt;br&gt;素材&lt;code&gt;SpaceShooter.unitypackage&lt;/code&gt;，网盘下载链接：&lt;a href=&quot;http://pan.baidu.com/s/1dFfrmTV&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网盘&lt;/a&gt;，密码: &lt;code&gt;p2p5&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;三、资源导入&quot;&gt;&lt;a href=&quot;#三、资源导入&quot; class=&quot;headerlink&quot; title=&quot;三、资源导入&quot;&gt;&lt;/a&gt;三、资源导入&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;新建工程，格式为3D格式，确认自己的保存路径；&lt;/li&gt;
+&lt;li&gt;点击Unity菜单栏&lt;code&gt;Assents -&amp;gt; Import package -&amp;gt; custom package&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;选择准备的素材&lt;code&gt;SpaceShooter.unitypackage&lt;/code&gt;，导入即可；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;四、创建玩家飞机&quot;&gt;&lt;a href=&quot;#四、创建玩家飞机&quot; class=&quot;headerlink&quot; title=&quot;四、创建玩家飞机&quot;&gt;&lt;/a&gt;四、创建玩家飞机&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在&lt;code&gt;Project&lt;/code&gt;搜索栏中找到&lt;code&gt;vehicle_playerShip&lt;/code&gt;，拖拽至&lt;code&gt;Hierarchy&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;调整摄像机的视角，使&lt;code&gt;PlayerShip&lt;/code&gt;在视线正下方；&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-02-DowntoCamera.jpg&quot; alt=&quot;02-DowntoCamera&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;给飞机添加碰撞&lt;br&gt;添加&lt;code&gt;MeshCollider&lt;/code&gt;选中&lt;code&gt;vehicle_playerShip&lt;/code&gt;，点击&lt;code&gt;Inspector&lt;/code&gt;中的&lt;code&gt;Add Componet&lt;/code&gt;，找到&lt;code&gt;Mesh Collider&lt;/code&gt;，添加&lt;code&gt;player_ship_collider&lt;/code&gt;，勾选覆盖，则自动将碰撞的范围确定为飞机自身。&lt;br&gt;使用简易的模型替换复杂模型实现碰撞效果：&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-05-Playershipcollidereasy.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;覆盖前：&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-03-Playershipcollider1.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;覆盖后：&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-04-Playershipcollider2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置触发器选项，勾上&lt;code&gt;Mesh Collider -&amp;gt; is Trigger&lt;/code&gt;，模型在于陨石发生碰撞时候，要发生爆炸，需要起到一个触发的作用。&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-08-Gravity.jpg&quot; alt=&quot;Tirgger&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置刚体，为玩家飞机加上&lt;code&gt;Rightbody&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-07-Rigidbodyjpg.jpg&quot; alt=&quot;Rigidboy&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;取消重力，否则飞机会往下掉，去除&lt;code&gt;Use Gavity&lt;/code&gt;的勾&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-06-Trigger.jpg&quot; alt=&quot;Gavity&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加尾焰效果&lt;br&gt;在&lt;code&gt;Project&lt;/code&gt;搜索栏中找到&lt;code&gt;engines_player&lt;/code&gt;，拖拽至&lt;code&gt;Playership&lt;/code&gt;。&lt;br&gt;飞机模型变为：&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-10-engines_player2.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;点击运行之后，飞机变为：&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-09-engines_player1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将该飞机保存为&lt;strong&gt;预置体&lt;/strong&gt;&lt;br&gt;在&lt;code&gt;Hierarchy&lt;/code&gt;窗口中，拖拽&lt;code&gt;Player_ship&lt;/code&gt;到&lt;code&gt;Project&lt;/code&gt;窗口&lt;code&gt;/Assents/Prefabs&lt;/code&gt;文件夹即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;五、玩家飞机材质（Standard）和灯光&quot;&gt;&lt;a href=&quot;#五、玩家飞机材质（Standard）和灯光&quot; class=&quot;headerlink&quot; title=&quot;五、玩家飞机材质（Standard）和灯光&quot;&gt;&lt;/a&gt;五、玩家飞机材质（Standard）和灯光&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;调整&lt;code&gt;main_light&lt;/code&gt;灯光位置、角度，该光源的强度可以大一些；&lt;/li&gt;
+&lt;li&gt;新建一个名为&lt;code&gt;fill_light&lt;/code&gt;的平行光，该光源的强度可以较小；&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;新建一个从下往上的灯光&lt;code&gt;Down_light&lt;/code&gt;，目的为把物体的轮廓表示出来;&lt;br&gt;效果如图：&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-11-light1.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-12-light2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;调整飞机材质、贴图&lt;br&gt;此处先选用在Metal上使用Stander，在glass上使用Stander（Specular setup）&lt;br&gt;两个材质球功能很强大，可以自行调整参数，进行更多的摸索。&lt;br&gt;如图：&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-13-Stander.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;六、添加太空背景&quot;&gt;&lt;a href=&quot;#六、添加太空背景&quot; class=&quot;headerlink&quot; title=&quot;六、添加太空背景&quot;&gt;&lt;/a&gt;六、添加太空背景&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在&lt;code&gt;Hierarchy&lt;/code&gt;中创建一个&lt;code&gt;Quard&lt;/code&gt;，修改名字为&lt;code&gt;BackgroundMap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;调整方位与大小&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-14-Quard1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加图片&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-15-background1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;调整图片比例，将X与Y的比例调整为1:2，得到不拉伸的图。&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-16-background2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;调整相机的位置和角度，使整个页面的大小位置合适，距离飞机的高度也合适&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-17-background3.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;待续……&lt;br&gt;下一期，实现玩家移动控制。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这篇教程是我上学的笔记，Unity3D初学，一步一步从零开始构建一个“太空射击”游戏。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;一、游戏功能概述&quot;&gt;&lt;a href=&quot;#一、游戏功能概述&quot; class=&quot;headerlink&quot; title=&quot;一、游戏功能概述&quot;&gt;&lt;/a&gt;一、游戏功能概述&lt;/h2&gt;&lt;p&gt;一个简单的太空射击游戏，将实现自动出现陨石、敌机，玩家需要控制自己的飞机躲避陨石，或者击落敌机。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Unity3D教程" scheme="http://leishiguang.com/categories/Unity3D%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Unity3D" scheme="http://leishiguang.com/tags/Unity3D/"/>
+    
+      <category term="教程" scheme="http://leishiguang.com/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
