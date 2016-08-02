@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://leishiguang.com/"/>
-  <updated>2016-07-29T14:35:15.000Z</updated>
+  <updated>2016-08-02T08:35:22.000Z</updated>
   <id>http://leishiguang.com/</id>
   
   <author>
@@ -16,11 +16,100 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一步一步构建“太空射击”Unity3D游戏（二）</title>
+    <link href="http://leishiguang.com/2016/08/02/2016-08-02-SpaceShoot_2/"/>
+    <id>http://leishiguang.com/2016/08/02/2016-08-02-SpaceShoot_2/</id>
+    <published>2016-08-01T16:00:00.000Z</published>
+    <updated>2016-08-02T08:35:22.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;“太空射击”Unity3D游戏笔记二，续上一篇，一步一步从零开始构建一个“太空射击”游戏。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;一、实现玩家移动控制&quot;&gt;&lt;a href=&quot;#一、实现玩家移动控制&quot; class=&quot;headerlink&quot; title=&quot;一、实现玩家移动控制&quot;&gt;&lt;/a&gt;一、实现玩家移动控制&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;选中玩家的飞机模型，&lt;code&gt;Add Component&lt;/code&gt;，&lt;code&gt;New Script&lt;/code&gt;添加新的C#脚本，命名为&lt;code&gt;PlayerControl&lt;/code&gt;；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-01-PlayerControl.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在&lt;code&gt;Assets&lt;/code&gt;中新建文件夹&lt;code&gt;Script&lt;/code&gt;，将脚本移动到该处（养成良好习惯）&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-02-Script.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;打开保存的&lt;code&gt;PlayerControl&lt;/code&gt;脚本，编程：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;using UnityEngine;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using System.Collections;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class PlayerControl : MonoBehaviour &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public float speed; //the Speed of PlayerShip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	// the place limit of PlayerShip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	[System .Serializable]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public class Boundary&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		public float xMin;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		public float xMax;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		public float zMin;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		public float zMax;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public Boundary boundary;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	// Use this for initialization&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	void Start () &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	// Update is called once per frame&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	void Update () &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	void FixedUpdate()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		// Control the move of PlayerShip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		float moveHorizontal = Input.GetAxis (&amp;quot;Horizontal&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		float moveVertical = Input.GetAxis(&amp;quot;Vertical&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		Vector3 movement = new Vector3(moveHorizontal,0.0f,moveVertical);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		GetComponent&amp;lt;Rigidbody&amp;gt;().velocity = movement * speed;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		// Control the position of PlayerShip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		GetComponent &amp;lt;Rigidbody &amp;gt; ().position =&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			new Vector3 (Mathf.Clamp (GetComponent &amp;lt;Rigidbody&amp;gt; ().position.x, boundary.xMin, boundary.xMax),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			             0.0f,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			             Mathf.Clamp (GetComponent&amp;lt;Rigidbody &amp;gt; ().position.z, boundary.zMin, boundary.zMax));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;在飞机模型&lt;code&gt;Inspector&lt;/code&gt;中添加数值&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-03-ValueofSpeed.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;创建玩家子弹&quot;&gt;&lt;a href=&quot;#创建玩家子弹&quot; class=&quot;headerlink&quot; title=&quot;创建玩家子弹&quot;&gt;&lt;/a&gt;创建玩家子弹&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在&lt;code&gt;Hierarchy&lt;/code&gt;中新建一个&lt;code&gt;Quard&lt;/code&gt;，修改名字为&lt;code&gt;player_Bullet&lt;/code&gt;，连接&lt;code&gt;fx laze orange dff&lt;/code&gt;素材，调整方向为与背景平行，切换材质为透明材质…&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-04-bult1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在&lt;code&gt;Hierarchy&lt;/code&gt;中新建一个&lt;code&gt;Empty&lt;/code&gt;，添加刚体，修改为无重力，添加胶囊碰撞体，调整胶囊大小…&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-05-bult2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将Bult添加为预置体…&lt;br&gt;以便发射的时候，自动生成….，这个Bult往前走，同时碰到物体成为一个事件…&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;子弹运动&quot;&gt;&lt;a href=&quot;#子弹运动&quot; class=&quot;headerlink&quot; title=&quot;子弹运动&quot;&gt;&lt;/a&gt;子弹运动&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;实现子弹往前飞的脚本&lt;br&gt;创建脚本名为&lt;code&gt;Mover&lt;/code&gt;，添加在子弹之上。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;using UnityEngine;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using System.Collections;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class Mover : MonoBehaviour &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public float speed;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	// Use this for initialization&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	void Start () &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		GetComponent&amp;lt;Rigidbody&amp;gt;().velocity = transform.forward * speed;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	// Update is called once per frame&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	void Update () &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;发射子弹&lt;br&gt;为玩家飞机添加空的GameObectChild，修改名字为”Shoot_Bult”，调整位置…&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-06-bult3.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在玩家飞机中，添加新脚本“ShootBult”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;using UnityEngine;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using System.Collections;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class ShootBult : MonoBehaviour &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public GameObject shot; //Preb of Bult&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public Transform shotSpwan; // Where shoud born Bult&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public float fireRate; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public float nextfire;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	// Use this for initialization&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	void Start () &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	// Update is called once per frame&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	void Update () &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		if (Input.GetButton (&amp;quot;Fire1&amp;quot;) &amp;amp;&amp;amp; Time.time &amp;gt; nextfire) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			nextfire = Time.time + fireRate ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			Instantiate (shot, shotSpwan.position, shotSpwan.rotation);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;拖拽&lt;code&gt;player_Bult&lt;/code&gt;到&lt;code&gt;Shot&lt;/code&gt;中，&lt;code&gt;ShotSpawn&lt;/code&gt;到&lt;code&gt;Shot Spwan&lt;/code&gt;中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-08-shootbult2.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-07-shootbult1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;飞机子弹的区域限定&quot;&gt;&lt;a href=&quot;#飞机子弹的区域限定&quot; class=&quot;headerlink&quot; title=&quot;飞机子弹的区域限定&quot;&gt;&lt;/a&gt;飞机子弹的区域限定&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在Hierarchy中创建一个Cube，修改名称为“Boundary”，调整大小，覆盖整个屏幕区域；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-11-edge3.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-10-edge2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-09-edge1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在Hierarchy中创建一个Cube，修改名称为“Boundary”，调整大小，覆盖整个屏幕区域；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-14-edge6.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-13-edge5.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-12-edge4.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;添加脚本&lt;code&gt;DestroyByBoundary.cs&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;using UnityEngine;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using System.Collections;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class DestroyByBoundary : MonoBehaviour &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	void OnTriggerExit(Collider other)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		Destroy (other.gameObject);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;测试&lt;br&gt;当子弹离开边界，子弹就会消失了&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160802-15-edge7.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;待续……&lt;br&gt;下一期，创建陨石&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;“太空射击”Unity3D游戏笔记二，续上一篇，一步一步从零开始构建一个“太空射击”游戏。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Unity3D教程" scheme="http://leishiguang.com/categories/Unity3D%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Unity3D" scheme="http://leishiguang.com/tags/Unity3D/"/>
+    
+      <category term="教程" scheme="http://leishiguang.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>公告</title>
-    <link href="http://leishiguang.com/2016/07/30/2016-07-30-notice/"/>
-    <id>http://leishiguang.com/2016/07/30/2016-07-30-notice/</id>
-    <published>2016-07-29T16:00:00.000Z</published>
-    <updated>2016-07-29T14:35:15.000Z</updated>
+    <link href="http://leishiguang.com/2016/08/02/2016-08-02-notice/"/>
+    <id>http://leishiguang.com/2016/08/02/2016-08-02-notice/</id>
+    <published>2016-08-01T16:00:00.000Z</published>
+    <updated>2016-08-02T08:25:50.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本博客正在积极建设当中，敬请期待。&lt;/p&gt;
@@ -51,7 +140,7 @@
     <link href="http://leishiguang.com/2016/07/29/2016-07-29-SpaceShoot_1/"/>
     <id>http://leishiguang.com/2016/07/29/2016-07-29-SpaceShoot_1/</id>
     <published>2016-07-28T16:00:00.000Z</published>
-    <updated>2016-08-02T04:02:40.000Z</updated>
+    <updated>2016-08-02T06:48:48.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;这篇教程是我上学的笔记，Unity3D初学，一步一步从零开始构建一个“太空射击”游戏。&lt;/p&gt;
@@ -95,7 +184,7 @@
 &lt;li&gt;在&lt;code&gt;Hierarchy&lt;/code&gt;中创建一个&lt;code&gt;Quard&lt;/code&gt;，修改名字为&lt;code&gt;BackgroundMap&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;调整方位与大小&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-14-Quard1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;添加图片&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-15-background1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;添加图片，选中图片后，拖入&lt;code&gt;Quard&lt;/code&gt;的&lt;code&gt;Inspector&lt;/code&gt;即可&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-15-background1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;调整图片比例，将X与Y的比例调整为1:2，得到不拉伸的图。&lt;br&gt;&lt;img src=&quot;http://oax3gi35k.bkt.clouddn.com/20160729-16-background2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
