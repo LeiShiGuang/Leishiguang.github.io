@@ -92,21 +92,21 @@
 <meta property="og:url" content="http://leishiguang.com/2016/08/03/2016-08-03-SpaceShoot_3/index.html">
 <meta property="og:site_name" content="雷世光的个人博客">
 <meta property="og:description" content="“太空射击”Unity3D游戏笔记三，续上一篇，一步一步从零开始构建一个“太空射击”游戏。这一篇，将完成小行星的创建、小行星旋转、小行星碰撞与爆炸、一波一波生成小行星。">
-<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/01-asteroid1.jpg">
-<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/02-asteroidmove1.jpg">
-<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/04-asteroidmove3.jpg">
-<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/03-asteroidmove2.jpg">
-<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/05-Destroy1.png">
-<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/06-Destroy2.jpg">
-<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/07-otherasteroid.jpg">
-<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/08-prebasteroid.jpg">
-<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/09-Wave.jpg">
-<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/10-asteroidtest.jpg">
-<meta property="og:updated_time" content="2016-08-03T02:51:28.000Z">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-01-asteroid1.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-02-asteroidmove1.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-04-asteroidmove3.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-03-asteroidmove2.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-05-Destroy1.png">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-06-Destroy2.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-07-otherasteroid.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-08-prebasteroid.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-09-Wave.jpg">
+<meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-10-asteroidtest.jpg">
+<meta property="og:updated_time" content="2016-08-03T03:22:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一步一步构建“太空射击”Unity3D游戏（三）">
 <meta name="twitter:description" content="“太空射击”Unity3D游戏笔记三，续上一篇，一步一步从零开始构建一个“太空射击”游戏。这一篇，将完成小行星的创建、小行星旋转、小行星碰撞与爆炸、一波一波生成小行星。">
-<meta name="twitter:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/01-asteroid1.jpg">
+<meta name="twitter:image" content="http://oax3gi35k.bkt.clouddn.com/20160803-01-asteroid1.jpg">
 
 
 
@@ -371,10 +371,10 @@
 <a id="more"></a>
 <h2 id="一、创建小行星"><a href="#一、创建小行星" class="headerlink" title="一、创建小行星"></a>一、创建小行星</h2><ol>
 <li>在<code>Hierarchy</code>中添加<code>Models -&gt; prop_asteroid_01</code>，移动位置在飞机前方…</li>
-<li>添加胶囊碰撞体<code>CapsuleCollider</code>，调整胶囊大小位置，覆盖小行星；<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/01-asteroid1.jpg" alt=""></li>
+<li>添加胶囊碰撞体<code>CapsuleCollider</code>，调整胶囊大小位置，覆盖小行星；<br><img src="http://oax3gi35k.bkt.clouddn.com/20160803-01-asteroid1.jpg" alt=""></li>
 </ol>
 <ol>
-<li>在<code>Hierarchy</code>中新建<code>GameObject</code>，修改名称为<code>Asteroid_01</code>，添加刚体<code>Rigidbody</code>，取消重力，添加之前给子弹以飞行速度的脚本<code>Mover.cs</code>，修改速度值为<code>-5</code>，运行测试，成功。<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/02-asteroidmove1.jpg" alt=""><br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/04-asteroidmove3.jpg" alt=""><br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/03-asteroidmove2.jpg" alt=""></li>
+<li>在<code>Hierarchy</code>中新建<code>GameObject</code>，修改名称为<code>Asteroid_01</code>，添加刚体<code>Rigidbody</code>，取消重力，添加之前给子弹以飞行速度的脚本<code>Mover.cs</code>，修改速度值为<code>-5</code>，运行测试，成功。<br><img src="http://oax3gi35k.bkt.clouddn.com/20160803-02-asteroidmove1.jpg" alt=""><br><img src="http://oax3gi35k.bkt.clouddn.com/20160803-04-asteroidmove3.jpg" alt=""><br><img src="http://oax3gi35k.bkt.clouddn.com/20160803-03-asteroidmove2.jpg" alt=""></li>
 </ol>
 <ol>
 <li>添加陨石旋转效果，新建脚本<code>RoudomRotater.cs</code></li>
@@ -383,27 +383,27 @@
 <h2 id="二、小行星的碰撞脚本"><a href="#二、小行星的碰撞脚本" class="headerlink" title="二、小行星的碰撞脚本"></a>二、小行星的碰撞脚本</h2><p>添加脚本，<code>DestroyerByContact.cs</code>。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line"></span><br><span class="line">public class DestroyerByContact : MonoBehaviour &#123;</span><br><span class="line"></span><br><span class="line">	public GameObject explosion;</span><br><span class="line">	public GameObject playerExplosion;</span><br><span class="line"></span><br><span class="line">	void OnTrigerEnter(Collider other)&#123;</span><br><span class="line">		if (other.tag == &quot;Boundary&quot; || other.tag == &quot;Enemy&quot;) &#123;</span><br><span class="line">			return; // not include the Boundary&apos;s Contact</span><br><span class="line">		&#125;</span><br><span class="line">		if (explosion != null) &#123;</span><br><span class="line">			Instantiate (explosion,transform.position,transform.rotation);</span><br><span class="line">		&#125;</span><br><span class="line">		if (other.tag == &quot;Player&quot;) &#123;</span><br><span class="line">			Instantiate (playerExplosion,other.transform.position,other.transform.rotation);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		Destroy (other.gameObject);</span><br><span class="line">		Destroy (this.gameObject);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="三、添加碰撞与爆炸效果"><a href="#三、添加碰撞与爆炸效果" class="headerlink" title="三、添加碰撞与爆炸效果"></a>三、添加碰撞与爆炸效果</h2><ol>
-<li>为<code>Boundary</code>和<code>PlayerShip</code>，<code>asteroid</code>设置标签<br>设置标签分别为<code>Boundary</code>,<code>Player</code>，<code>Enemy</code>（与<code>DestroyerByContact.cs</code>脚本相对应）<br>如图：<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/05-Destroy1.png" alt=""></li>
+<li>为<code>Boundary</code>和<code>PlayerShip</code>，<code>asteroid</code>设置标签<br>设置标签分别为<code>Boundary</code>,<code>Player</code>，<code>Enemy</code>（与<code>DestroyerByContact.cs</code>脚本相对应）<br>如图：<br><img src="http://oax3gi35k.bkt.clouddn.com/20160803-05-Destroy1.png" alt=""></li>
 </ol>
 <ol>
-<li><p>在行星的<code>DestroyerByContact.cs</code>脚本中链接爆炸效果<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/06-Destroy2.jpg" alt=""></p>
+<li><p>在行星的<code>DestroyerByContact.cs</code>脚本中链接爆炸效果<br><img src="http://oax3gi35k.bkt.clouddn.com/20160803-06-Destroy2.jpg" alt=""></p>
 </li>
 <li><p>添加其他种类的行星，</p>
 </li>
 </ol>
 <p>在<code>Hierarchy</code>中拖入新的行星模型，添加胶囊碰撞体，调整碰撞体大小，勾选触发器…<br>在<code>Hierarchy</code>中新建<code>GameObject</code>，将行星模型拖入，重置<code>GameObject</code>与行星模型的位置信息..<br>在<code>GameObject</code>中添加刚体<code>Rigidbody</code>，取消重力，添加<code>Mover.cs</code>脚本，设置速度，添加<code>Roundom.cs</code>旋转脚本，设置角速度，添加<code>DestroyerByContact.cs</code>脚本，并依次链接爆炸动画…</p>
-<p><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/07-otherasteroid.jpg" alt=""></p>
+<p><img src="http://oax3gi35k.bkt.clouddn.com/20160803-07-otherasteroid.jpg" alt=""></p>
 <h2 id="四、动态生成陨石"><a href="#四、动态生成陨石" class="headerlink" title="四、动态生成陨石"></a>四、动态生成陨石</h2><ol>
-<li><p>将小行星依次导出为预置体<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/08-prebasteroid.jpg" alt=""></p>
+<li><p>将小行星依次导出为预置体<br><img src="http://oax3gi35k.bkt.clouddn.com/20160803-08-prebasteroid.jpg" alt=""></p>
 </li>
 <li><p>新建空的<code>GameObject</code>，修改名称为<code>GameControl</code>，新建<code>GameControler.cs</code>脚本</p>
 </li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line"></span><br><span class="line">public class GameControler : MonoBehaviour &#123;</span><br><span class="line">	public GameObject [] hazards;</span><br><span class="line">	public Vector3 spawnValues; //the position of asteroid</span><br><span class="line"></span><br><span class="line">	public int hazardCount; //The Count of per Born</span><br><span class="line">	public float spawnWait; //The waiting time of per Born</span><br><span class="line">	public float starWait; //The Waiting time of Start</span><br><span class="line">	public float waveWait; //The Waiting time between next Born</span><br><span class="line"></span><br><span class="line">	// Use this for initialization</span><br><span class="line">	void Start () &#123;</span><br><span class="line">		StartCoroutine (SpwanWave ());</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// Update is called once per frame</span><br><span class="line">	void Update () &#123;</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	IEnumerator SpwanWave()&#123;</span><br><span class="line">		yield return new WaitForSeconds (starWait);</span><br><span class="line">		while (true) &#123;</span><br><span class="line">			for (int i =0; i&lt; hazardCount; i++) &#123;</span><br><span class="line">				GameObject hazard = hazards [Random.Range (0, hazards.Length)];</span><br><span class="line">				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);</span><br><span class="line">				Instantiate (hazard, spawnPosition, Quaternion.identity);</span><br><span class="line">				yield return new WaitForSeconds (spawnWait);</span><br><span class="line">			&#125;</span><br><span class="line">			yield return new WaitForSeconds (waveWait);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="五、测试"><a href="#五、测试" class="headerlink" title="五、测试"></a>五、测试</h2><ol>
-<li><p>设置参数<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/09-Wave.jpg" alt=""></p>
+<li><p>设置参数<br><img src="http://oax3gi35k.bkt.clouddn.com/20160803-09-Wave.jpg" alt=""></p>
 </li>
-<li><p>测试<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/10-asteroidtest.jpg" alt=""></p>
+<li><p>测试<br><img src="http://oax3gi35k.bkt.clouddn.com/20160803-10-asteroidtest.jpg" alt=""></p>
 </li>
 </ol>
 <blockquote>
