@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="项目管理,笔记," />
+  <meta name="keywords" content="笔记,Unity3D," />
 
 
 
@@ -86,16 +86,27 @@
 
 
 
-<meta name="description" content="我将陆续在本博客中更新项目管理理论基础，这也是本博客的第一份“产品”。">
+<meta name="description" content="“太空射击”Unity3D游戏笔记三，续上一篇，一步一步从零开始构建一个“太空射击”游戏。这一篇，将完成小行星的创建、小行星旋转、小行星碰撞与爆炸、一波一波生成小行星。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="“初窥”项目管理01 - 前言">
-<meta property="og:url" content="http://leishiguang.com/2016/07/25/2016-07-25-PMa-01/index.html">
+<meta property="og:title" content="一步一步构建“太空射击”Unity3D游戏（三）">
+<meta property="og:url" content="http://leishiguang.com/2016/08/03/2016-08-03-SpaceShoot_3/index.html">
 <meta property="og:site_name" content="雷世光的个人博客">
-<meta property="og:description" content="我将陆续在本博客中更新项目管理理论基础，这也是本博客的第一份“产品”。">
-<meta property="og:updated_time" content="2016-08-03T02:57:14.000Z">
+<meta property="og:description" content="“太空射击”Unity3D游戏笔记三，续上一篇，一步一步从零开始构建一个“太空射击”游戏。这一篇，将完成小行星的创建、小行星旋转、小行星碰撞与爆炸、一波一波生成小行星。">
+<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/01-asteroid1.jpg">
+<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/02-asteroidmove1.jpg">
+<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/04-asteroidmove3.jpg">
+<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/03-asteroidmove2.jpg">
+<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/05-Destroy1.png">
+<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/06-Destroy2.jpg">
+<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/07-otherasteroid.jpg">
+<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/08-prebasteroid.jpg">
+<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/09-Wave.jpg">
+<meta property="og:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/10-asteroidtest.jpg">
+<meta property="og:updated_time" content="2016-08-03T02:51:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="“初窥”项目管理01 - 前言">
-<meta name="twitter:description" content="我将陆续在本博客中更新项目管理理论基础，这也是本博客的第一份“产品”。">
+<meta name="twitter:title" content="一步一步构建“太空射击”Unity3D游戏（三）">
+<meta name="twitter:description" content="“太空射击”Unity3D游戏笔记三，续上一篇，一步一步从零开始构建一个“太空射击”游戏。这一篇，将完成小行星的创建、小行星旋转、小行星碰撞与爆炸、一波一波生成小行星。">
+<meta name="twitter:image" content="http://leishiguang.com/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/01-asteroid1.jpg">
 
 
 
@@ -113,7 +124,7 @@
   };
 </script>
 
-  <title> “初窥”项目管理01 - 前言 | 雷世光的个人博客 </title>
+  <title> 一步一步构建“太空射击”Unity3D游戏（三） | 雷世光的个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -293,7 +304,7 @@
             
             
               
-                “初窥”项目管理01 - 前言
+                一步一步构建“太空射击”Unity3D游戏（三）
               
             
           </h1>
@@ -305,8 +316,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-25T00:00:00+08:00" content="2016-07-25">
-              2016-07-25
+            <time itemprop="dateCreated" datetime="2016-08-03T00:00:00+08:00" content="2016-08-03">
+              2016-08-03
             </time>
           </span>
 
@@ -319,8 +330,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/“初窥”项目管理/" itemprop="url" rel="index">
-                    <span itemprop="name">“初窥”项目管理</span>
+                  <a href="/categories/Unity3D笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity3D笔记</span>
                   </a>
                 </span>
 
@@ -335,8 +346,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/25/2016-07-25-PMa-01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/25/2016-07-25-PMa-01/" itemprop="commentsCount"></span>
+                <a href="/2016/08/03/2016-08-03-SpaceShoot_3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/03/2016-08-03-SpaceShoot_3/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -365,18 +376,49 @@
 
       
         <blockquote>
-<p>我将陆续在本博客中更新<strong>项目管理</strong>理论基础，这也是本博客的第一份“产品”。</p>
+<p>“太空射击”Unity3D游戏笔记三，续上一篇，一步一步从零开始构建一个“太空射击”游戏。<br>这一篇，将完成小行星的创建、小行星旋转、小行星碰撞与爆炸、一波一波生成小行星。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="自我简介"><a href="#自我简介" class="headerlink" title="自我简介"></a>自我简介</h2><p>本人，男，90后，截止今日已在某初创IT企业工作一年有余。这里所谓的初创企业，可能和大家心中“创业公司该会很忙碌吧”的想法不同，我们公司，异乎寻常的“清闲”。一年之前，员工总人数3人，其中，2位是几乎从不现身的Boss。今天2016年7月，员工总人数5人，多了1位iOS工程师和1位办公室助理。<br>人力的不足，导致我们难以正常进行项目，索性，公司也放大长假一般，几乎所有的时间都由我自由安排…</p>
-<p>于是，在2015年9月份，放下了手上的“嵌入式驱动开发”之后，我便着手开始学习<strong>项目管理</strong>，到2016年5月份，也顺利通过了计算机软考中级<strong>系统集成项目管理工程师</strong>考试。</p>
-<p>这期间，不知不觉，积累了笔记百余篇，就也想着整理出来，和各位分享，自己也回炉一番，静待接下来的项目管理实战。</p>
-<h2 id="我的打算"><a href="#我的打算" class="headerlink" title="我的打算"></a>我的打算</h2><p>关于<strong>项目管理</strong>的基础理论，市面上也有太多的教材。<br>但都是一些经验老道的大师傅，在浩瀚群雄观摩大局，虽然理论知识都十分扎实，却也缺了入门的渠道，高深的理论，也不是很好理解。</p>
-<p>于是，在此，就也将自己的路程描绘一番，也好给更多希望了解项目管理知识的人，更多参考。</p>
-<h2 id="不包括"><a href="#不包括" class="headerlink" title="不包括"></a>不包括</h2><p>如前文描述，我还只是一个初出茅庐的小牛犊，不敢说自己理论基础理解透测，更不敢声称自己经验丰富。</p>
-<p>几乎一点实际项目管理经验的我，就也只能粗略聊聊基础知识。</p>
-<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>最后，理论知识终归是要落到实践，我本人也极为认同项目管理是经验的学科，在此谨美好地祝愿自己，将会有许多的机会接触到实际的项目管理。</p>
-<h2 id="更多内容"><a href="#更多内容" class="headerlink" title="更多内容"></a>更多内容</h2><p>（待续）</p>
+<h2 id="一、创建小行星"><a href="#一、创建小行星" class="headerlink" title="一、创建小行星"></a>一、创建小行星</h2><ol>
+<li>在<code>Hierarchy</code>中添加<code>Models -&gt; prop_asteroid_01</code>，移动位置在飞机前方…</li>
+<li>添加胶囊碰撞体<code>CapsuleCollider</code>，调整胶囊大小位置，覆盖小行星；<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/01-asteroid1.jpg" alt=""></li>
+</ol>
+<ol>
+<li>在<code>Hierarchy</code>中新建<code>GameObject</code>，修改名称为<code>Asteroid_01</code>，添加刚体<code>Rigidbody</code>，取消重力，添加之前给子弹以飞行速度的脚本<code>Mover.cs</code>，修改速度值为<code>-5</code>，运行测试，成功。<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/02-asteroidmove1.jpg" alt=""><br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/04-asteroidmove3.jpg" alt=""><br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/03-asteroidmove2.jpg" alt=""></li>
+</ol>
+<ol>
+<li>添加陨石旋转效果，新建脚本<code>RoudomRotater.cs</code></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line"></span><br><span class="line">public class RoudomRotater : MonoBehaviour &#123;</span><br><span class="line"></span><br><span class="line">	public float tumble;</span><br><span class="line"></span><br><span class="line">	// Use this for initialization</span><br><span class="line">	void Start () &#123;</span><br><span class="line">		GetComponent&lt;Rigidbody&gt; ().angularVelocity = Random.insideUnitSphere * tumble;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="二、小行星的碰撞脚本"><a href="#二、小行星的碰撞脚本" class="headerlink" title="二、小行星的碰撞脚本"></a>二、小行星的碰撞脚本</h2><p>添加脚本，<code>DestroyerByContact.cs</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line"></span><br><span class="line">public class DestroyerByContact : MonoBehaviour &#123;</span><br><span class="line"></span><br><span class="line">	public GameObject explosion;</span><br><span class="line">	public GameObject playerExplosion;</span><br><span class="line"></span><br><span class="line">	void OnTrigerEnter(Collider other)&#123;</span><br><span class="line">		if (other.tag == &quot;Boundary&quot; || other.tag == &quot;Enemy&quot;) &#123;</span><br><span class="line">			return; // not include the Boundary&apos;s Contact</span><br><span class="line">		&#125;</span><br><span class="line">		if (explosion != null) &#123;</span><br><span class="line">			Instantiate (explosion,transform.position,transform.rotation);</span><br><span class="line">		&#125;</span><br><span class="line">		if (other.tag == &quot;Player&quot;) &#123;</span><br><span class="line">			Instantiate (playerExplosion,other.transform.position,other.transform.rotation);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		Destroy (other.gameObject);</span><br><span class="line">		Destroy (this.gameObject);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三、添加碰撞与爆炸效果"><a href="#三、添加碰撞与爆炸效果" class="headerlink" title="三、添加碰撞与爆炸效果"></a>三、添加碰撞与爆炸效果</h2><ol>
+<li>为<code>Boundary</code>和<code>PlayerShip</code>，<code>asteroid</code>设置标签<br>设置标签分别为<code>Boundary</code>,<code>Player</code>，<code>Enemy</code>（与<code>DestroyerByContact.cs</code>脚本相对应）<br>如图：<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/05-Destroy1.png" alt=""></li>
+</ol>
+<ol>
+<li><p>在行星的<code>DestroyerByContact.cs</code>脚本中链接爆炸效果<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/06-Destroy2.jpg" alt=""></p>
+</li>
+<li><p>添加其他种类的行星，</p>
+</li>
+</ol>
+<p>在<code>Hierarchy</code>中拖入新的行星模型，添加胶囊碰撞体，调整碰撞体大小，勾选触发器…<br>在<code>Hierarchy</code>中新建<code>GameObject</code>，将行星模型拖入，重置<code>GameObject</code>与行星模型的位置信息..<br>在<code>GameObject</code>中添加刚体<code>Rigidbody</code>，取消重力，添加<code>Mover.cs</code>脚本，设置速度，添加<code>Roundom.cs</code>旋转脚本，设置角速度，添加<code>DestroyerByContact.cs</code>脚本，并依次链接爆炸动画…</p>
+<p><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/07-otherasteroid.jpg" alt=""></p>
+<h2 id="四、动态生成陨石"><a href="#四、动态生成陨石" class="headerlink" title="四、动态生成陨石"></a>四、动态生成陨石</h2><ol>
+<li><p>将小行星依次导出为预置体<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/08-prebasteroid.jpg" alt=""></p>
+</li>
+<li><p>新建空的<code>GameObject</code>，修改名称为<code>GameControl</code>，新建<code>GameControler.cs</code>脚本</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line"></span><br><span class="line">public class GameControler : MonoBehaviour &#123;</span><br><span class="line">	public GameObject [] hazards;</span><br><span class="line">	public Vector3 spawnValues; //the position of asteroid</span><br><span class="line"></span><br><span class="line">	public int hazardCount; //The Count of per Born</span><br><span class="line">	public float spawnWait; //The waiting time of per Born</span><br><span class="line">	public float starWait; //The Waiting time of Start</span><br><span class="line">	public float waveWait; //The Waiting time between next Born</span><br><span class="line"></span><br><span class="line">	// Use this for initialization</span><br><span class="line">	void Start () &#123;</span><br><span class="line">		StartCoroutine (SpwanWave ());</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// Update is called once per frame</span><br><span class="line">	void Update () &#123;</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	IEnumerator SpwanWave()&#123;</span><br><span class="line">		yield return new WaitForSeconds (starWait);</span><br><span class="line">		while (true) &#123;</span><br><span class="line">			for (int i =0; i&lt; hazardCount; i++) &#123;</span><br><span class="line">				GameObject hazard = hazards [Random.Range (0, hazards.Length)];</span><br><span class="line">				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);</span><br><span class="line">				Instantiate (hazard, spawnPosition, Quaternion.identity);</span><br><span class="line">				yield return new WaitForSeconds (spawnWait);</span><br><span class="line">			&#125;</span><br><span class="line">			yield return new WaitForSeconds (waveWait);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="五、测试"><a href="#五、测试" class="headerlink" title="五、测试"></a>五、测试</h2><ol>
+<li><p>设置参数<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/09-Wave.jpg" alt=""></p>
+</li>
+<li><p>测试<br><img src="/Users/leishiguang/Desktop/教程/SpaceShoot_3_images/10-asteroidtest.jpg" alt=""></p>
+</li>
+</ol>
+<blockquote>
+<p>待续……<br>下一期，添加背景音效、添加敌机</p>
+</blockquote>
 
       
     </div>
@@ -398,9 +440,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/项目管理/" rel="tag">#项目管理</a>
-          
             <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/Unity3D/" rel="tag">#Unity3D</a>
           
         </div>
       
@@ -409,17 +451,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/01/2016-06-01-qiniu/" rel="next" title="七牛图床使用体会">
-                <i class="fa fa-chevron-left"></i> 七牛图床使用体会
+              <a href="/2016/08/03/2016-08-03-notice/" rel="next" title="公告">
+                <i class="fa fa-chevron-left"></i> 公告
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/26/2016-07-26-PMa-02/" rel="prev" title="“初窥”项目管理02 - 人人都应该学项目管理">
-                “初窥”项目管理02 - 人人都应该学项目管理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -434,10 +472,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/07/25/2016-07-25-PMa-01/"
-     data-title="“初窥”项目管理01 - 前言"
+        <div class="ds-share flat" data-thread-key="2016/08/03/2016-08-03-SpaceShoot_3/"
+     data-title="一步一步构建“太空射击”Unity3D游戏（三）"
      data-content=""
-     data-url="http://leishiguang.com/2016/07/25/2016-07-25-PMa-01/">
+     data-url="http://leishiguang.com/2016/08/03/2016-08-03-SpaceShoot_3/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -464,8 +502,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/25/2016-07-25-PMa-01/"
-           data-title="“初窥”项目管理01 - 前言" data-url="http://leishiguang.com/2016/07/25/2016-07-25-PMa-01/">
+      <div class="ds-thread" data-thread-key="2016/08/03/2016-08-03-SpaceShoot_3/"
+           data-title="一步一步构建“太空射击”Unity3D游戏（三）" data-url="http://leishiguang.com/2016/08/03/2016-08-03-SpaceShoot_3/">
       </div>
     
   </div>
@@ -615,7 +653,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#自我简介"><span class="nav-number">1.</span> <span class="nav-text">自我简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我的打算"><span class="nav-number">2.</span> <span class="nav-text">我的打算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不包括"><span class="nav-number">3.</span> <span class="nav-text">不包括</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后话"><span class="nav-number">4.</span> <span class="nav-text">后话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多内容"><span class="nav-number">5.</span> <span class="nav-text">更多内容</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、创建小行星"><span class="nav-number">1.</span> <span class="nav-text">一、创建小行星</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、小行星的碰撞脚本"><span class="nav-number">2.</span> <span class="nav-text">二、小行星的碰撞脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、添加碰撞与爆炸效果"><span class="nav-number">3.</span> <span class="nav-text">三、添加碰撞与爆炸效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、动态生成陨石"><span class="nav-number">4.</span> <span class="nav-text">四、动态生成陨石</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、测试"><span class="nav-number">5.</span> <span class="nav-text">五、测试</span></a></li></ol></div>
             
           </div>
         </section>

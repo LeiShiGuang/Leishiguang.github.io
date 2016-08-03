@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Unity3D,教程," />
+  <meta name="keywords" content="笔记,Unity3D," />
 
 
 
@@ -86,12 +86,12 @@
 
 
 
-<meta name="description" content="“太空射击”Unity3D游戏笔记二，续上一篇，一步一步从零开始构建一个“太空射击”游戏。">
+<meta name="description" content="“太空射击”Unity3D游戏笔记二，续上一篇，一步一步从零开始构建一个“太空射击”游戏。这一篇，将完成玩家移动控制、创建玩家子弹、子弹运动、子弹边界">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一步一步构建“太空射击”Unity3D游戏（二）">
 <meta property="og:url" content="http://leishiguang.com/2016/08/02/2016-08-02-SpaceShoot_2/index.html">
 <meta property="og:site_name" content="雷世光的个人博客">
-<meta property="og:description" content="“太空射击”Unity3D游戏笔记二，续上一篇，一步一步从零开始构建一个“太空射击”游戏。">
+<meta property="og:description" content="“太空射击”Unity3D游戏笔记二，续上一篇，一步一步从零开始构建一个“太空射击”游戏。这一篇，将完成玩家移动控制、创建玩家子弹、子弹运动、子弹边界">
 <meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160802-01-PlayerControl.png">
 <meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160802-02-Script.jpg">
 <meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160802-03-ValueofSpeed.jpg">
@@ -107,10 +107,10 @@
 <meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160802-13-edge5.jpg">
 <meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160802-12-edge4.jpg">
 <meta property="og:image" content="http://oax3gi35k.bkt.clouddn.com/20160802-15-edge7.png">
-<meta property="og:updated_time" content="2016-08-02T08:35:22.000Z">
+<meta property="og:updated_time" content="2016-08-03T02:54:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一步一步构建“太空射击”Unity3D游戏（二）">
-<meta name="twitter:description" content="“太空射击”Unity3D游戏笔记二，续上一篇，一步一步从零开始构建一个“太空射击”游戏。">
+<meta name="twitter:description" content="“太空射击”Unity3D游戏笔记二，续上一篇，一步一步从零开始构建一个“太空射击”游戏。这一篇，将完成玩家移动控制、创建玩家子弹、子弹运动、子弹边界">
 <meta name="twitter:image" content="http://oax3gi35k.bkt.clouddn.com/20160802-01-PlayerControl.png">
 
 
@@ -174,7 +174,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">AR/VR行业、项目管理、时间管理</p>
+  <p class="site-subtitle">GIS、AR/VR、项目管理、时间管理</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -335,8 +335,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Unity3D教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity3D教程</span>
+                  <a href="/categories/Unity3D笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity3D笔记</span>
                   </a>
                 </span>
 
@@ -381,13 +381,12 @@
 
       
         <blockquote>
-<p>“太空射击”Unity3D游戏笔记二，续上一篇，一步一步从零开始构建一个“太空射击”游戏。</p>
+<p>“太空射击”Unity3D游戏笔记二，续上一篇，一步一步从零开始构建一个“太空射击”游戏。<br>这一篇，将完成玩家移动控制、创建玩家子弹、子弹运动、子弹边界</p>
 </blockquote>
 <a id="more"></a>
 <h2 id="一、实现玩家移动控制"><a href="#一、实现玩家移动控制" class="headerlink" title="一、实现玩家移动控制"></a>一、实现玩家移动控制</h2><ol>
-<li>选中玩家的飞机模型，<code>Add Component</code>，<code>New Script</code>添加新的C#脚本，命名为<code>PlayerControl</code>；</li>
+<li>选中玩家的飞机模型，<code>Add Component</code>，<code>New Script</code>添加新的C#脚本，命名为<code>PlayerControl</code>；<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-01-PlayerControl.png" alt=""></li>
 </ol>
-<p><img src="http://oax3gi35k.bkt.clouddn.com/20160802-01-PlayerControl.png" alt=""></p>
 <ol>
 <li>在<code>Assets</code>中新建文件夹<code>Script</code>，将脚本移动到该处（养成良好习惯）<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-02-Script.jpg" alt=""></li>
 </ol>
@@ -395,53 +394,46 @@
 <li>打开保存的<code>PlayerControl</code>脚本，编程：</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line"></span><br><span class="line">public class PlayerControl : MonoBehaviour &#123;</span><br><span class="line"></span><br><span class="line">	public float speed; //the Speed of PlayerShip</span><br><span class="line"></span><br><span class="line">	// the place limit of PlayerShip</span><br><span class="line">	[System .Serializable]</span><br><span class="line">	public class Boundary</span><br><span class="line">	&#123;</span><br><span class="line">		public float xMin;</span><br><span class="line">		public float xMax;</span><br><span class="line">		public float zMin;</span><br><span class="line">		public float zMax;</span><br><span class="line">	&#125;</span><br><span class="line">	public Boundary boundary;</span><br><span class="line"></span><br><span class="line">	// Use this for initialization</span><br><span class="line">	void Start () &#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// Update is called once per frame</span><br><span class="line">	void Update () &#123;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	void FixedUpdate()&#123;</span><br><span class="line"></span><br><span class="line">		// Control the move of PlayerShip</span><br><span class="line"></span><br><span class="line">		float moveHorizontal = Input.GetAxis (&quot;Horizontal&quot;);</span><br><span class="line">		float moveVertical = Input.GetAxis(&quot;Vertical&quot;);</span><br><span class="line">		Vector3 movement = new Vector3(moveHorizontal,0.0f,moveVertical);</span><br><span class="line"></span><br><span class="line">		GetComponent&lt;Rigidbody&gt;().velocity = movement * speed;</span><br><span class="line"></span><br><span class="line">		// Control the position of PlayerShip</span><br><span class="line"></span><br><span class="line">		GetComponent &lt;Rigidbody &gt; ().position =</span><br><span class="line">			new Vector3 (Mathf.Clamp (GetComponent &lt;Rigidbody&gt; ().position.x, boundary.xMin, boundary.xMax),</span><br><span class="line">			             0.0f,</span><br><span class="line">			             Mathf.Clamp (GetComponent&lt;Rigidbody &gt; ().position.z, boundary.zMin, boundary.zMax));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
+<ul>
+<li><ol>
 <li>在飞机模型<code>Inspector</code>中添加数值<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-03-ValueofSpeed.jpg" alt=""></li>
 </ol>
-<h2 id="创建玩家子弹"><a href="#创建玩家子弹" class="headerlink" title="创建玩家子弹"></a>创建玩家子弹</h2><ol>
+</li>
+</ul>
+<h2 id="二、创建玩家子弹"><a href="#二、创建玩家子弹" class="headerlink" title="二、创建玩家子弹"></a>二、创建玩家子弹</h2><ol>
 <li>在<code>Hierarchy</code>中新建一个<code>Quard</code>，修改名字为<code>player_Bullet</code>，连接<code>fx laze orange dff</code>素材，调整方向为与背景平行，切换材质为透明材质…<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-04-bult1.jpg" alt=""></li>
-</ol>
-<ol>
 <li><p>在<code>Hierarchy</code>中新建一个<code>Empty</code>，添加刚体，修改为无重力，添加胶囊碰撞体，调整胶囊大小…<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-05-bult2.jpg" alt=""></p>
 </li>
 <li><p>将Bult添加为预置体…<br>以便发射的时候，自动生成….，这个Bult往前走，同时碰到物体成为一个事件…</p>
 </li>
 </ol>
-<h2 id="子弹运动"><a href="#子弹运动" class="headerlink" title="子弹运动"></a>子弹运动</h2><ol>
-<li>实现子弹往前飞的脚本<br>创建脚本名为<code>Mover</code>，添加在子弹之上。</li>
-</ol>
+<h2 id="三、子弹往前飞的脚本"><a href="#三、子弹往前飞的脚本" class="headerlink" title="三、子弹往前飞的脚本"></a>三、子弹往前飞的脚本</h2><p>创建脚本名为<code>Mover</code>，添加在子弹之上。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line"></span><br><span class="line">public class Mover : MonoBehaviour &#123;</span><br><span class="line"></span><br><span class="line">	public float speed;</span><br><span class="line"></span><br><span class="line">	// Use this for initialization</span><br><span class="line">	void Start () &#123;</span><br><span class="line">		GetComponent&lt;Rigidbody&gt;().velocity = transform.forward * speed;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// Update is called once per frame</span><br><span class="line">	void Update () &#123;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四、发射子弹"><a href="#四、发射子弹" class="headerlink" title="四、发射子弹"></a>四、发射子弹</h2><ol>
+<li>为玩家飞机添加空的GameObectChild，修改名字为”Shoot_Bult”，调整位置…<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-06-bult3.jpg" alt=""></li>
+</ol>
 <ol>
-<li><p>发射子弹<br>为玩家飞机添加空的GameObectChild，修改名字为”Shoot_Bult”，调整位置…<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-06-bult3.jpg" alt=""></p>
-</li>
-<li><p>在玩家飞机中，添加新脚本“ShootBult”</p>
-</li>
+<li>在玩家飞机中，添加新脚本“ShootBult”</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line"></span><br><span class="line">public class ShootBult : MonoBehaviour &#123;</span><br><span class="line"></span><br><span class="line">	public GameObject shot; //Preb of Bult</span><br><span class="line">	public Transform shotSpwan; // Where shoud born Bult</span><br><span class="line">	public float fireRate; </span><br><span class="line">	public float nextfire;</span><br><span class="line"></span><br><span class="line">	// Use this for initialization</span><br><span class="line">	void Start () &#123;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// Update is called once per frame</span><br><span class="line">	void Update () &#123;</span><br><span class="line">	</span><br><span class="line">		if (Input.GetButton (&quot;Fire1&quot;) &amp;&amp; Time.time &gt; nextfire) &#123;</span><br><span class="line">			nextfire = Time.time + fireRate ;</span><br><span class="line">			Instantiate (shot, shotSpwan.position, shotSpwan.rotation);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
+<ul>
 <li>拖拽<code>player_Bult</code>到<code>Shot</code>中，<code>ShotSpawn</code>到<code>Shot Spwan</code>中</li>
-</ol>
+</ul>
 <p><img src="http://oax3gi35k.bkt.clouddn.com/20160802-08-shootbult2.png" alt=""><br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-07-shootbult1.jpg" alt=""></p>
-<h2 id="飞机子弹的区域限定"><a href="#飞机子弹的区域限定" class="headerlink" title="飞机子弹的区域限定"></a>飞机子弹的区域限定</h2><ol>
-<li>在Hierarchy中创建一个Cube，修改名称为“Boundary”，调整大小，覆盖整个屏幕区域；</li>
-</ol>
-<p><img src="http://oax3gi35k.bkt.clouddn.com/20160802-11-edge3.jpg" alt=""><br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-10-edge2.jpg" alt=""></p>
-<p><img src="http://oax3gi35k.bkt.clouddn.com/20160802-09-edge1.jpg" alt=""></p>
-<ol>
-<li>在Hierarchy中创建一个Cube，修改名称为“Boundary”，调整大小，覆盖整个屏幕区域；</li>
-</ol>
-<p><img src="http://oax3gi35k.bkt.clouddn.com/20160802-14-edge6.jpg" alt=""></p>
-<p><img src="http://oax3gi35k.bkt.clouddn.com/20160802-13-edge5.jpg" alt=""></p>
-<p><img src="http://oax3gi35k.bkt.clouddn.com/20160802-12-edge4.jpg" alt=""></p>
-<ol>
-<li>添加脚本<code>DestroyByBoundary.cs</code></li>
+<h2 id="五、飞机子弹的区域限定"><a href="#五、飞机子弹的区域限定" class="headerlink" title="五、飞机子弹的区域限定"></a>五、飞机子弹的区域限定</h2><ol>
+<li><p>在Hierarchy中创建一个Cube，修改名称为“Boundary”，调整大小，覆盖整个屏幕区域；<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-11-edge3.jpg" alt=""><br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-10-edge2.jpg" alt=""><br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-09-edge1.jpg" alt=""></p>
+</li>
+<li><p>在Hierarchy中创建一个Cube，修改名称为“Boundary”，调整大小，覆盖整个屏幕区域；<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-14-edge6.jpg" alt=""><br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-13-edge5.jpg" alt=""><br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-12-edge4.jpg" alt=""></p>
+</li>
+<li><p>添加脚本<code>DestroyByBoundary.cs</code></p>
+</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line"></span><br><span class="line">public class DestroyByBoundary : MonoBehaviour &#123;</span><br><span class="line"></span><br><span class="line">	void OnTriggerExit(Collider other)&#123;</span><br><span class="line">		Destroy (other.gameObject);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>测试<br>当子弹离开边界，子弹就会消失了<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-15-edge7.png" alt=""></li>
+<h2 id="六、测试"><a href="#六、测试" class="headerlink" title="六、测试"></a>六、测试</h2><ol>
+<li>当子弹离开边界，子弹就会消失了<br><img src="http://oax3gi35k.bkt.clouddn.com/20160802-15-edge7.png" alt=""></li>
 </ol>
 <blockquote>
-<p>待续……<br>下一期，创建陨石</p>
+<p>待续……<br>下一期，创建陨石，陨石碰撞，一波一波生成陨石</p>
 </blockquote>
 
       
@@ -464,9 +456,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Unity3D/" rel="tag">#Unity3D</a>
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
           
-            <a href="/tags/教程/" rel="tag">#教程</a>
+            <a href="/tags/Unity3D/" rel="tag">#Unity3D</a>
           
         </div>
       
@@ -475,13 +467,17 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/02/2016-08-02-notice/" rel="next" title="公告">
-                <i class="fa fa-chevron-left"></i> 公告
+              <a href="/2016/07/29/2016-07-29-SpaceShoot_1/" rel="next" title="一步一步构建“太空射击”Unity3D游戏（一）">
+                <i class="fa fa-chevron-left"></i> 一步一步构建“太空射击”Unity3D游戏（一）
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/03/2016-08-03-notice/" rel="prev" title="公告">
+                公告 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -572,7 +568,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -580,7 +576,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -589,7 +585,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -677,7 +673,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、实现玩家移动控制"><span class="nav-number">1.</span> <span class="nav-text">一、实现玩家移动控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建玩家子弹"><span class="nav-number">2.</span> <span class="nav-text">创建玩家子弹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子弹运动"><span class="nav-number">3.</span> <span class="nav-text">子弹运动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#飞机子弹的区域限定"><span class="nav-number">4.</span> <span class="nav-text">飞机子弹的区域限定</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、实现玩家移动控制"><span class="nav-number">1.</span> <span class="nav-text">一、实现玩家移动控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、创建玩家子弹"><span class="nav-number">2.</span> <span class="nav-text">二、创建玩家子弹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、子弹往前飞的脚本"><span class="nav-number">3.</span> <span class="nav-text">三、子弹往前飞的脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、发射子弹"><span class="nav-number">4.</span> <span class="nav-text">四、发射子弹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、飞机子弹的区域限定"><span class="nav-number">5.</span> <span class="nav-text">五、飞机子弹的区域限定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、测试"><span class="nav-number">6.</span> <span class="nav-text">六、测试</span></a></li></ol></div>
             
           </div>
         </section>
