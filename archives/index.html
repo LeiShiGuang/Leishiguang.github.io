@@ -5,10 +5,10 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
@@ -27,9 +27,12 @@
 
 
 
+
+
+
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -63,9 +66,9 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -74,43 +77,57 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="雷世光的个人博客" type="application/atom+xml" />
 
 
 
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
-
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
 
 
-<meta name="description" content="持续浇灌小树苗，终有一天长成大树">
+
+<meta name="description" content="尽力成长为靠谱的 Web Deployment">
 <meta property="og:type" content="website">
 <meta property="og:title" content="雷世光的个人博客">
 <meta property="og:url" content="http://leishiguang.com/archives/index.html">
 <meta property="og:site_name" content="雷世光的个人博客">
-<meta property="og:description" content="持续浇灌小树苗，终有一天长成大树">
+<meta property="og:description" content="尽力成长为靠谱的 Web Deployment">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="雷世光的个人博客">
-<meta name="twitter:description" content="持续浇灌小树苗，终有一天长成大树">
+<meta name="twitter:description" content="尽力成长为靠谱的 Web Deployment">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"Shirphie’s Blog":"http://shirphie.com"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
+
+
+
+  <link rel="canonical" href="http://leishiguang.com/archives/"/>
+
+
+
+
 
   <title> 归档 | 雷世光的个人博客 </title>
 </head>
@@ -121,15 +138,19 @@
 
 
 
+
+
   <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?9f7d705ebcd6e0b6a8b1fc2c30796fbe";
+      hm.src = "https://hm.baidu.com/hm.js?9f7d705ebcd6e0b6a8b1fc2c30796fbe";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
+
 
 
 
@@ -143,29 +164,33 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">雷世光的个人博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">雷世光的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Rubyist | 行万里路，读万卷书</p>
+      
   </div>
-  <p class="site-subtitle">GIS、AR/VR、项目管理、时间管理</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -215,32 +240,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-guestbook">
-          <a href="/guestbook" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-send-o"></i> <br />
-            
-            留言
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-pm01">
-          <a href="/categories/“初窥”项目管理/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-thumbs-o-up"></i> <br />
-            
-            “初窥”项目管理
           </a>
         </li>
       
@@ -251,6 +256,8 @@
 
   
 </nav>
+
+
 
  </div>
     </header>
@@ -270,7 +277,7 @@
       
         
       
-      嗯..! 目前共计 8 篇日志。 继续努力。
+      嗯..! 目前共计 6 篇日志。 继续努力。
     </span>
 
     
@@ -282,7 +289,7 @@
       
         
         <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
         </div>
       
       
@@ -294,9 +301,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2016/08/03/2016-08-03-SpaceShoot_3/" itemprop="url">
+            <a class="post-title-link" href="/2017/04/15/2017-04-15-今天做了什么/" itemprop="url">
               
-                <span itemprop="name">一步一步构建“太空射击”Unity3D游戏（三）</span>
+                <span itemprop="name">今天做了什么</span>
               
             </a>
         
@@ -304,9 +311,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-03T00:00:00+08:00"
-              content="2016-08-03" >
-          08-03
+              datetime="2017-04-15T00:00:00+08:00"
+              content="2017-04-15" >
+          04-15
         </time>
       </div>
 
@@ -331,9 +338,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2016/08/03/2016-08-03-notice/" itemprop="url">
+            <a class="post-title-link" href="/2017/04/08/2017-04-08-体育运动/" itemprop="url">
               
-                <span itemprop="name">公告</span>
+                <span itemprop="name">体育运动</span>
               
             </a>
         
@@ -341,9 +348,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-03T00:00:00+08:00"
-              content="2016-08-03" >
-          08-03
+              datetime="2017-04-08T00:00:00+08:00"
+              content="2017-04-08" >
+          04-08
         </time>
       </div>
 
@@ -368,9 +375,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2016/08/02/2016-08-02-SpaceShoot_2/" itemprop="url">
+            <a class="post-title-link" href="/2017/04/01/2017-04-01-死神/" itemprop="url">
               
-                <span itemprop="name">一步一步构建“太空射击”Unity3D游戏（二）</span>
+                <span itemprop="name">死神</span>
               
             </a>
         
@@ -378,9 +385,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-02T00:00:00+08:00"
-              content="2016-08-02" >
-          08-02
+              datetime="2017-04-01T00:00:00+08:00"
+              content="2017-04-01" >
+          04-01
         </time>
       </div>
 
@@ -405,9 +412,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2016/07/29/2016-07-29-SpaceShoot_1/" itemprop="url">
+            <a class="post-title-link" href="/2017/03/25/2017-03-25-自由来自于问题/" itemprop="url">
               
-                <span itemprop="name">一步一步构建“太空射击”Unity3D游戏（一）</span>
+                <span itemprop="name">自由来自于问题</span>
               
             </a>
         
@@ -415,9 +422,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-29T00:00:00+08:00"
-              content="2016-07-29" >
-          07-29
+              datetime="2017-03-25T00:00:00+08:00"
+              content="2017-03-25" >
+          03-25
         </time>
       </div>
 
@@ -442,9 +449,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2016/07/28/2016-07-28-PMa-03/" itemprop="url">
+            <a class="post-title-link" href="/2017/03/18/2017-03-18-美好的世界在心里/" itemprop="url">
               
-                <span itemprop="name">“初窥”项目管理03 - 鸟瞰IT项目管理</span>
+                <span itemprop="name">美好的世界在心里</span>
               
             </a>
         
@@ -452,9 +459,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-28T00:00:00+08:00"
-              content="2016-07-28" >
-          07-28
+              datetime="2017-03-18T00:00:00+08:00"
+              content="2017-03-18" >
+          03-18
         </time>
       </div>
 
@@ -479,46 +486,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2016/07/26/2016-07-26-PMa-02/" itemprop="url">
+            <a class="post-title-link" href="/2017/03/14/2017-03-14-生活节奏/" itemprop="url">
               
-                <span itemprop="name">“初窥”项目管理02 - 人人都应该学项目管理</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-26T00:00:00+08:00"
-              content="2016-07-26" >
-          07-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/25/2016-07-25-PMa-01/" itemprop="url">
-              
-                <span itemprop="name">“初窥”项目管理01 - 前言</span>
+                <span itemprop="name">生活节奏</span>
               
             </a>
         
@@ -526,46 +496,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-25T00:00:00+08:00"
-              content="2016-07-25" >
-          07-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/01/2016-06-01-qiniu/" itemprop="url">
-              
-                <span itemprop="name">七牛图床使用体会</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-01T00:00:00+08:00"
-              content="2016-06-01" >
-          06-01
+              datetime="2017-03-14T00:00:00+08:00"
+              content="2017-03-14" >
+          03-14
         </time>
       </div>
 
@@ -607,35 +540,44 @@
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
                alt="雷世光" />
           <p class="site-author-name" itemprop="name">雷世光</p>
-          <p class="site-description motion-element" itemprop="description">持续浇灌小树苗，终有一天长成大树</p>
+           
+              <p class="site-description motion-element" itemprop="description">尽力成长为靠谱的 Web Deployment</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">8</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">4</span>
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">6</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -643,13 +585,6 @@
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
@@ -699,22 +634,13 @@
 
         
         
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://shirphie.com" title="Shirphie’s Blog" target="_blank">Shirphie’s Blog</a>
-                </li>
-              
-            </ul>
-          </div>
+
         
 
+
       </section>
+
+      
 
       
 
@@ -730,16 +656,17 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">雷世光</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
@@ -749,31 +676,20 @@
   </a>
 </div>
 
+
         
-
-<div class="busuanzi-count">
-
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
-  
-
-  
-    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
-  
-  
-</div>
-
-
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -796,41 +712,44 @@
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
 
 
 
@@ -845,39 +764,54 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"leishiguang"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-  
+
+
+
+
+	
 
 
 
 
 
   
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "bab4802af34f47b6b59a5b0e7e43b902",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
   
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
   
 
   
